@@ -1,5 +1,2 @@
-Here you can say lots of fun things about your site.
-
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+I am currently studying software engineering at ALX.
+I like writing notes in latex and blog here when I feel like it.
