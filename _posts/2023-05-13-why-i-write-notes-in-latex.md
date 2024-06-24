@@ -16,39 +16,40 @@ citizens with the skills to thrive in the technology market.
 So after being accepted into the program I had a bit of a problem, I didn't actually
 know how to study. So naturally I started researching, I read books, articles and watched
 videos and this really motivated me to evaluate how I was going to study. 
-=====
+
+
 ### The motivation
 
 Following are the resources that impacted me the most:
-* [Deep work - Cal Newport](https://www.goodreads.com/en/book/show/25744928) : Book resource
-* [Elon Musk - Ashlee Vance](https://www.goodreads.com/en/book/show/25541028) : Book resource
-* [Jay Skullz](https://www.youtube.com/@jayskullz) : Video resource
-* [Multivariable Calculus using neovim + latex - Neil Mehra](https://www.youtube.com/watch?v=m-76tLYiqVY&t=2s) : Video resource
-* [Senior Mars - Math major using Vim + Latex](https://www.youtube.com/watch?v=DOtM1mrWjUo&t=254s) : Video resource
------
+1.  [Deep work - Cal Newport](https://www.goodreads.com/en/book/show/25744928) : Book resource
+2. [Elon Musk - Ashlee Vance](https://www.goodreads.com/en/book/show/25541028) : Book resource
+3. [Jay Skullz](https://www.youtube.com/@jayskullz) : Video resource
+4. [Multivariable Calculus using neovim + latex - Neil Mehra](https://www.youtube.com/watch?v=m-76tLYiqVY&t=2s) : Video resource
+5. [Senior Mars - Math major using Vim + Latex](https://www.youtube.com/watch?v=DOtM1mrWjUo&t=254s) : Video resource
+
 #### [Deep work - Cal Newport](https://www.goodreads.com/en/book/show/25744928):
 This book is a great insight into how maximising focus can impact both learning
 and productivity.
 If you are already sold on the whole deep work concept skip to the second part of the book.
------
+
 #### [Elon Musk - Ashlee Vance](https://www.goodreads.com/en/book/show/25541028):
 While not strictly a book on studying the drive and accomplishments of Elon Musk cannot be
 ignored, on top of that I think very few other books show such a great insight into the life
 of a driven CEO. Not only is Musk an ultra succesful business man but he has a vision and goal
 for the future, that is what inspires me about him.
------
+
 #### [Jay Skullz](https://www.youtube.com/@jayskullz):
 Jay Skulls has a great Youtube channel where he does study with me streams and also talks about
 his own drive and motivation for studying.
------
+
 #### [Multivariable Calculus using neovim + latex - Neil Mehra](https://www.youtube.com/watch?v=m-76tLYiqVY&t=2s):
 This video is just a great display of what latex editing looks like when it's done quickly, also her 
 neovim config is beautiful.
------
+
 #### [Senior Mars - Math major using Vim + Latex](https://www.youtube.com/watch?v=DOtM1mrWjUo&t=254s):
 This is the original video that got me thinking about how latex could be used for notes and studying.
 If you want to see what is possible and sort of how to do it then watch this.
-=====
+
 ### My workflow
 I am currently working a full-time job and studying at the same time. This limits
 how many hours I can devote to deep work and studying but I have managed to set a
