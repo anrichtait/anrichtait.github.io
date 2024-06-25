@@ -38,7 +38,7 @@ Yet another tool by huderlem! This is an amazing game editing tool that basicall
 
 2. [doom emacs](https://github.com/doomemacs/doomemacs)
 
-If you don't have a text editor of choice then you should defintly use vscode, but I have been using emacs for a while and do not plan on changing to vscode __ever__. That being said there is a emacs config on my github as well as my config files for linux. If you do decide to use vscode check out [huderlem's poryscript vscode extension](https://github.com/huderlem/poryscript-pls) for nice syntax highlighting and all that.
+If you don't have a text editor of choice then you should definitley use vscode, but I have been using emacs for a while and do not plan on changing to vscode __ever__. That being said there is a emacs config on my github as well as my config files for linux. If you do decide to use vscode check out [huderlem's poryscript vscode extension](https://github.com/huderlem/poryscript-pls) for nice syntax highlighting and all that.
 
 3. [team aquas asset repo](https://github.com/Pawkkie/Team-Aquas-Asset-Repo)
 
@@ -51,19 +51,23 @@ Also most of the resources I mentioned above have detailed instructions. If you 
 
 1. Follow the instructions on the [rh-hideout/pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) repo (assuming you plan to use the expansion repo, otherwise just clone the base repo mentioned above)
 2. Use make and nproc to build the .gba file and then test it with a gba emulator of your choice.
+
  2.1
 ```
 nproc
 ```
+ 
  2.2
  ```
  make -j (output of nproc)
  ```
- 2.3 Wait for the build to complete and then test the .gba file.
+ 
+ 2.3 Wait for the build to complete and then test the .gba file. 
+ 
 __You will need to do this every time you make changes and want to test them.__
 
 
 ### Conclusion
 I hope this helps a bit, like I said feel free to reach out via email if you have issues, but please read the docs as much as possible first. Also I recommend making regular backups after major changes because it's pretty easy to break your project in the beginning.
 
-https://ko-fi.com/anrichtait
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I4ZPGX8)

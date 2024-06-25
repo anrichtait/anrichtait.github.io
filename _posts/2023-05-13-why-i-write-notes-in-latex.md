@@ -71,4 +71,4 @@ I may have shot myself in the foot when I was younger but that can't be an excus
 a study workflow that works for me. In your case it might be different, the only advice I have is try and 
 find some happiness while studying. I gain a huge amount just from writing beautiful notes.
 
-
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I4ZPGX8)
