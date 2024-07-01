@@ -7,4 +7,4 @@ While editing pokemon emerald decomps it can be quiet confusing at times to find
 
 This blog post aims to be a quick reference for myself and others of the most important files you will need to edit. I will update this list as I learn an discover more.
 
-
+**This post is a work in progress so stay tuned.**
