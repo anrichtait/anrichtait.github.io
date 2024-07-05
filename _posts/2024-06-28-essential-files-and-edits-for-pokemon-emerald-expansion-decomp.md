@@ -59,8 +59,7 @@ Modify the code as follows:
 
 Have a look through all the files in this directory. The comments explain most of the important details.
 
-**This post is a work in progress, so stay tuned.**
-
 ---
 
-I hope this revised blog post meets your expectations! If you have any other requests or need further assistance, feel free to ask.
+**This post is a work in progress, so stay tuned.**
+
