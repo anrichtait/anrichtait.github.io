@@ -38,6 +38,14 @@ Below you can see the available flags to change:
     //.dynamaxLevel = 5,
 ```
 
+__NOTE:__ EV and IV spreads are as follows:
+1. hp
+2. atk
+3. def
+4. speed
+5. sp.atk
+6. sp.def
+
 ### 4. File: `src/data/trainers.h`
 Edit the attributes of a specific trainer or gym leader here. Like with the `trainer_parties.h` file using porymap is a great way to find trainer names.
 
