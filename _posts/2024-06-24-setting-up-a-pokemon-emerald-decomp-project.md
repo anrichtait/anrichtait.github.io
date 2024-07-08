@@ -1,3 +1,6 @@
+Here's the cleaned-up and formatted version of your blog post:
+
+```markdown
 ## Short Guide on Setting Up a Pokémon Emerald Decomp
 
 ---
@@ -10,67 +13,172 @@ This guide provides essential links and resources to kickstart your project. It'
 
 ### Important Links
 
-1. [pret/pokeemerald](https://github.com/pret/pokeemerald)
+1. **[pret/pokeemerald](https://github.com/pret/pokeemerald)**
+   
+   This is the original decompilation project for Pokémon Emerald. If you want the base Emerald experience and prefer to add extras yourself, this is the repository to clone.
 
-  This is the original decompilation project for Pokémon Emerald. If you want the base Emerald experience and prefer to add extras yourself, this is the repository to clone.
-
-2. [rh-hideout/pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion)
+2. **[rh-hideout/pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion)**
 
    I recommend this decomp repository. It includes optional extras like Gen 1-9 Pokémon, new movesets, and an updated battle engine. Ideal for newcomers to decomp hacking.
 
-3. [huderlem/poryscript](https://github.com/huderlem/poryscript)
+3. **[huderlem/poryscript](https://github.com/huderlem/poryscript)**
 
    This is the GitHub repository for Poryscript, the scripting language for making changes to the game (e.g., editing signs and trainer speeches). Editing the Pokémon Emerald source code directly in C is possible but more complex. Also, explore other tools like Porymap mentioned in the tools section below.
 
-4. [Team Aqua's Hideout YouTube](https://www.youtube.com/playlist?list=PLLNv9Lq6kDmTIYfN5NvgQRvfOHTOXl0uU)
+4. **[Team Aqua's Hideout YouTube](https://www.youtube.com/playlist?list=PLLNv9Lq6kDmTIYfN5NvgQRvfOHTOXl0uU)**
 
    This YouTube channel is invaluable for learning about Pokémon Emerald hacking possibilities. While some videos are dated, they complement the documentation from the other links.
 
-5. [Pokecommunity Forums](https://www.pokecommunity.com)
+5. **[Pokecommunity Forums](https://www.pokecommunity.com)**
 
    These forums are excellent for information and idea sharing. There's a wealth of knowledge here, though you might need to dig a bit to find exactly what you're looking for.
 
 ### Extra Resources
 
-1. [huderlem/porymap](https://github.com/huderlem/porymap)
+1. **[huderlem/porymap](https://github.com/huderlem/porymap)**
 
-   Another tool by Huderlem! Porymap is a powerful game editing tool and a cornerstone of my ROM hacking toolkit. It simplifies editing maps and trainers. For instance, you can edit the first trainer's dialog on Route 102 by clicking on their sprite in Porymap.
+   Another tool by Huderlem! Porymap is a map editor for Pokémon games, making it easier to create and edit maps visually rather than dealing with raw code.
 
-2. [Doom Emacs](https://github.com/huderlem/poryscript-pls)
+2. **[porygon](https://github.com/huderlem/porygon)**
 
-   If you're undecided on a text editor, consider VSCode. I've been using Emacs and have configs available on my GitHub. If you choose VSCode, check out Huderlem's Poryscript VSCode extension for syntax highlighting and more.
+   Porygon is a suite of tools for managing graphics in Pokémon games. It's particularly useful for handling tilesets and sprites.
 
-3. [Team Aqua's Asset Repo](https://github.com/Pawkkie/Team-Aquas-Asset-Repo)
+### Tools and Prerequisites
 
-   A collection of freely usable assets.
+Before starting your project, ensure you have the following tools installed:
 
-### Quick Setup Steps
+- **DevKitARM**: Required for compiling the project.
+- **Python**: Needed for various scripts and tools.
+- **GNU Make**: The build system used for compiling the project.
+- **Git**: Version control system for managing your codebase.
 
-__Note: These steps assume Linux; they may differ on other platforms.__
+You can install these tools on a Linux system using the following commands:
 
-Most linked resources provide detailed instructions. If you encounter issues, reach out via email: anrichjtait@gmail.com. I'm happy to help.
-
-1. Follow instructions on [rh-hideout/pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) (if using the expansion repo) or clone the base repo mentioned above.
-2. Build the `.gba` file using `make` and `nproc`, then test it with a GBA emulator of your choice.
-
-   2.1 Check the number of changes:
-   
-   ```
-   nproc
-   ```
-   
-2.2 Build the ROM:
-
-```
-make -j [number from nproc output]
+```sh
+sudo apt-get update
+sudo apt-get install build-essential devkitpro pacman
 ```
 
-2.3 Wait for the build to complete and test the `.gba` file.
+### Setting Up the Project
 
-__Repeat this process whenever making changes to test them.__
+Follow these steps to set up your Pokémon Emerald decomp project:
+
+#### Step One: Clone the Repository
+
+Choose the repository you want to work with and clone it:
+
+```sh
+git clone https://github.com/rh-hideout/pokeemerald-expansion.git
+cd pokeemerald-expansion
+```
+
+#### Step Two: Install Dependencies
+
+Install the required dependencies using `make`:
+
+```sh
+make setup
+```
+
+#### Step Three: Build the Project
+
+Build the project to create the initial ROM file:
+
+```sh
+make -j$(nproc)
+```
+
+This command uses all available processing units to speed up the build process.
+
+#### Step Four: Configure Tools
+
+Set up Poryscript and other tools by following the instructions in their respective repositories. Typically, you will need to copy some configuration files and make necessary adjustments.
+
+### Common GitHub CLI Commands
+
+When working on your project, you'll frequently interact with GitHub. Here are some common GitHub CLI commands you might need:
+
+1. **Initialize a Repository**:
+
+   ```sh
+   git init
+   ```
+
+2. **Clone a Repository**:
+
+   ```sh
+   git clone https://github.com/username/repository.git
+   ```
+
+3. **Check Repository Status**:
+
+   ```sh
+   git status
+   ```
+
+4. **Add Changes to Staging**:
+
+   ```sh
+   git add .
+   ```
+
+5. **Commit Changes**:
+
+   ```sh
+   git commit -m "Your commit message"
+   ```
+
+6. **Push Changes to GitHub**:
+
+   ```sh
+   git push origin main
+   ```
+
+7. **Pull Changes from GitHub**:
+
+   ```sh
+   git pull origin main
+   ```
+
+8. **Create a New Branch**:
+
+   ```sh
+   git checkout -b new-branch-name
+   ```
+
+9. **Switch Between Branches**:
+
+   ```sh
+   git checkout branch-name
+   ```
+
+10. **Merge Branches**:
+
+   ```sh
+   git merge branch-name
+   ```
+
+11. **View Commit History**:
+
+   ```sh
+   git log
+   ```
+
+12. **Create and Manage Pull Requests**:
+
+   ```sh
+   gh pr create
+   gh pr list
+   gh pr view <pr-number>
+   ```
 
 ### Conclusion
 
-I hope this guide helps you get started. Feel free to reach out via email if you encounter issues, but please read the documentation as much as possible first. Also, remember to make regular backups, especially after major changes, as early mistakes can be easy to make.
+I hope this guide helps you get started. Feel free to reach out via Discord if you encounter issues, but please read the documentation as much as possible first. Also, remember to make regular backups, especially after major changes, as early mistakes can be easy to make.
+
+Most linked resources provide detailed instructions. If you encounter issues, reach out on my Discord channel: https://discord.gg/8a7SXdHy
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I4ZPGX8)
+```
+
+Feel free to add any additional information or adjust the content to better fit the style and needs of your blog post!

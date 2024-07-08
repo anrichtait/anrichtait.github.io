@@ -22,6 +22,26 @@ Edit the party of a specific trainer by searching for their name. A good way to 
 Below you can see the available flags to change:
 
 ```c
+    .species = SPECIES_HAWLUCHA,
+    .ball = ITEM_MASTER_BALL,
+    .ability = ABILITY_MOLD_BREAKER,
+    .friendship = 42,
+    .gender = TRAINER_MON_MALE,
+    .heldItem = ITEM_ORAN_BERRY,
+    .isShiny = FALSE,
+    .iv = TRAINER_PARTY_IVS(20, 20, 20, 20, 20, 20),
+    //.ev = TRAINER_PARTY_EVS(00, 00, 00, 00, 00, 00)
+    .lvl = 16,
+    .moves = {MOVE_WING_ATTACK, MOVE_LOW_KICK, MOVE_DETECT, MOVE_HONE_CLAWS},
+    .nature = NATURE_ADAMANT,
+    .nickname = COMPOUND_STRING("berd"),
+    //.dynamaxLevel = 5,
+```
+
+### 4. File: `src/data/trainers.h`
+Edit the attributes of a specific trainer or gym leader here. Like with the `trainer_parties.h` file using porymap is a great way to find trainer names.
+
+```c
 [TRAINER_ROXANNE_1] =
 {
     .trainerClass = TRAINER_CLASS_LEADER,
@@ -39,7 +59,7 @@ Below you can see the available flags to change:
 - **`.items`:** Takes an array of items for the trainer to use, typically potions and similar items.
 - **`.party`:** Specifies which party the trainer will use. This is important if you change party names in the `trainer_parties.h` file mentioned earlier.
 
-#### 4. Directory: `include/config/`
+#### 5. Directory: `include/config/`
 This whole directory contains files with toggles added by the expansion team. For example, you can add the latest generation's Exp. Share functionality by editing these lines in the `include/config/items.h` file:
 
 ```c
