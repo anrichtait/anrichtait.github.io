@@ -1,6 +1,3 @@
-Here's the cleaned-up and formatted version of your blog post:
-
-```markdown
 ## Short Guide on Setting Up a Pokémon Emerald Decomp
 
 ---
@@ -179,6 +176,3 @@ I hope this guide helps you get started. Feel free to reach out via Discord if y
 Most linked resources provide detailed instructions. If you encounter issues, reach out on my Discord channel: https://discord.gg/8a7SXdHy
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I4ZPGX8)
-```
-
-Feel free to add any additional information or adjust the content to better fit the style and needs of your blog post!
