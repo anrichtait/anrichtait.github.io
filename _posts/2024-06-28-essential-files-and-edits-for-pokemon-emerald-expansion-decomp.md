@@ -87,6 +87,31 @@ Modify the code as follows:
 
 Have a look through all the files in this directory. The comments explain most of the important details.
 
+### 6. File: `src/starter_choose.c`
+
+In this file, you can change the starter Pokémon. I haven't added more than three because I don't think it is necessary for my game, but I have changed the choices to:
+- [Sprigatito](https://bulbapedia.bulbagarden.net/wiki/Sprigatito_(Pok%C3%A9mon))
+- [Litten](https://bulbapedia.bulbagarden.net/wiki/Litten_(Pok%C3%A9mon))
+- [Piplup](https://bulbapedia.bulbagarden.net/wiki/Piplup_(Pok%C3%A9mon))
+
+### 7. File: `src/data/pokemon/species_info/gen_x_families.h`
+
+This file is where you can change many aspects of each Pokémon. Below you can see the flags that I'm mostly interested in:
+
+```c
+[SPECIES_LITTEN] = {
+    .baseHP        = 45,
+    .baseAttack    = 65,
+    .baseDefense   = 40,
+    .baseSpeed     = 70,
+    .baseSpAttack  = 60,
+    .baseSpDefense = 40,
+    .abilities = {ABILITY_BLAZE, ABILITY_NONE, ABILITY_INTIMIDATE},
+},
+```
+
+I don't often change the base stats, but I have been tinkering with Litten's a little bit to make it more balanced as a starter. The above settings are all default, but I removed the Blaze ability so Intimidate is always the given ability. I think without it, Litten isn't a viable option compared to the others. I did something similar with Sprigatito, who now always has the Protean ability.
+
 ---
 
 **This post is a work in progress, so stay tuned.**
