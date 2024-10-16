@@ -1,19 +1,26 @@
 ---
 layout: page
 menu: false
-date: '2020-02-27 01:53:59'
+date: '2024-10-24 01:53:59'
 title: About
 description: Some description.
 permalink: /about/
 ---
 
-<img class="img-rounded" src="/assets/img/uploads/profile.png" alt="Thomas A. Anderson" width="200">
+<img class="img-rounded" src="../assets/img/uploads/icon.jpg" alt="Anrich Tait" width="200">
 
 # About
+**Hi there!**  
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+I'm Anrich Tait, _a.k.a_ toon.  
+You can find more about me on my [blog](https://anrichtait.github.io/) or on [steam](https://steamcommunity.com/id/fuckingtoon/).
+
+✍️ I currently do freelance writing work as my day job.  
+👨‍💻 I'm currently learning Rust / Game Development / Computer Science  
+
+[![GitHub](https://img.shields.io/badge/-GitHub%20Pages-6495ED?logo=Github)](https://github.com/anrichtait)
+[![Gmail](https://img.shields.io/badge/Gmail-d14836?style=flat&logo=Gmail&logoColor=white)](mailto:farfilm.stream@gmail.com)
+[![Kofi](https://img.shields.io/badge/Gmail-d14836?style=flat&logo=Gmail&logoColor=white)](https://ko-fi.com/anrichtait)
+![Followers](https://img.shields.io/github/followers/anrichtait)
+![Stars](https://img.shields.io/github/stars/anrichtait)
+
