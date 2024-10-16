@@ -1,13 +1,11 @@
-name: Jekflix
-title: Jekflix | A blog theme for Jekyll
-description: Jekflix is a template for Jekyll inspired by Netflix and made by
-  Thiago Rossener.
+name: My Blog
+title: My Blog | A blog for Far Film
+description: This blog is for my online media
+  Anrich Tait.
 tags:
   - blog
-  - template
-  - jekyll
-  - theme
-  - netlify
+  - rust
+  - cs
 show_hero: true
 menu:
   - title: Home
@@ -18,7 +16,7 @@ menu:
     url: /contact
   - title: Feed
     url: /feed.xml
-email: youremail@test.com
+email: farfilm.stream@gmail.com
 # See: https://disqus.com/
 disqus_username: disqus_username
 # Contact Form Setting
