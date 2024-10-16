@@ -1,15 +1,15 @@
 ---
 date: 2024-10-16 12:26:40
 layout: post
-title: Why books should be your priority?
+title: Learning Rust
 subtitle: This is my first blog post!
 description: Currently testing new features
-image: ../assets/img/uploads/scifi-art.png
-optimized_image: ../assets/img/uploads/scifi-art.png
-category: Game-dev
+image: ../assets/img/uploads/rust-art.png
+optimized_image: ../assets/img/uploads/rust-art.png
+category: Study Log
 tags:
   - books
-  - sci-fi
+  - study
   - game-dev
   - indie
 author: Anrich Tait || Far Film
