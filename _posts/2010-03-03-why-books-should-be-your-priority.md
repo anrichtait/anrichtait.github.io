@@ -1,5 +1,5 @@
 ---
-date: 2024-16-24 12:26:40
+date: 2024-10-16 12:26:40
 layout: post
 title: Why books should be your priority?
 subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -10,7 +10,7 @@ category: Game-dev
 tags:
   - books
   - read
-author: Anrich Tait aka FarFilm
+author: Anrich Tait || Far Film
 paginate: true
 ---
 
