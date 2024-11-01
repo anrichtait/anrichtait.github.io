@@ -9,11 +9,7 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-<<<<<<< HEAD
 timezone: Africa/Johannesburg
-=======
-timezone:
->>>>>>> bdd554f (chore: initialize the environment)
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -98,17 +94,10 @@ theme_mode: # [light | dark]
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-<<<<<<< HEAD
 cdn: "/assets/img/"
 
 # the avatar on sidebar, support local or CORS resources
 avatar: "icon.jpg"
-=======
-cdn:
-
-# the avatar on sidebar, support local or CORS resources
-avatar:
->>>>>>> bdd554f (chore: initialize the environment)
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
