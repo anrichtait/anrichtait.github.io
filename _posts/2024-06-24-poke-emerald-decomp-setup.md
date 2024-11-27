@@ -1,10 +1,10 @@
 ---
-title: Short Guide on Setting Up a Pokémon Emerald Decomp
+title: Guide - Setting Up a Pokémon Emerald Decomp
 date: 2024-06-24 18:00:00 +/-TTTT
-categories: [GUIDES, POKEMON]
+categories: [Guides, Pokémon]
 tags: [pokemon]     # TAG names should always be lowercase
 description: Quick start guide on getting a pokemon emerald decomp project setup.
-toc: false
+toc: true
 comments: false
 media_subpath: /assets/img/
 ---

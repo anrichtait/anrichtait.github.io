@@ -1,10 +1,10 @@
 ---
-title: Essential Files for Pokemon Emerald Expansion Decomp Projects
+title: Guide - Essential Files for Pokemon Emerald Expansion Decomp Projects
 date: 2024-06-28 17:00:00 +/-TTTT
-categories: [GUIDES, POKEMON]
+categories: [Guides, Pokémon]
 tags: [pokemon]     # TAG names should always be lowercase
 description: A quick guide and reference for all the essentiall files you need when editing a pokemon emerald decompilation.
-toc: false
+toc: true
 comments: false
 media_subpath: /assets/img/
 ---
