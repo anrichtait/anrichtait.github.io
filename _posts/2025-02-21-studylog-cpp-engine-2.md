@@ -53,8 +53,6 @@ A fixed update interval ensures that all simulation calculations occur at a cons
 ---
 
 ## Implementing the Game Loop
-*For those interested in the code, it will be on my [GitHub](https://github.com/anrichtait).*
-
 My goals for the game loop are to separate the fixed update and normal update loops. This will stabilize the physics and other simulation-related code and also allow me to later possibly add multiplayer support to the game engine. While implementing the game loop, I did my best to follow the best practices discussed in the book *Game Programming Patterns*. Let's take a closer look at the full implementation.
 
 ### GameEngine Class
@@ -90,72 +88,93 @@ I'm not going to go into the code for each member function right now, but here's
 
 ---
 
-Here's a refined version of your section with a detailed breakdown of the code, keeping a technical yet easy-to-read tone:
-
----
-
 ### main.cpp FINALLY THE LOOP
 Considering that the game loop is such an important part of the engine—and everything else builds off of it—I decided to implement it in the `main()` function. From here, all the other features can be branched out into their own files and headers.
 
-> One thing you will notice is that, at the moment, instead of SDL I am using raylib. I'll just quickly say that I plan on replacing all the raylib-specific code with standard library code later—I just didn't have internet over the weekend to consult the SDL docs. Long story short, raylib is easier to use, so for now it's good enough.
+> The below code block is condensed, to see the full implementation look at the **main.cpp** in [this repo]().
 
-```cpp
+``` c++
+
 int main(void) {
-    GameEngine game;
-    game.Initialize();
+	GameEngine game;
+	game.Initialize();
 
-    double previousFrameTime = GetTime();      // Capture the starting time
-    double lag = 0.0;                          // Accumulator for fixed update intervals
-    const double FIXED_UPDATE_INTERVAL = 1.0 / 60.0; // Fixed update rate (60 updates per second)
-    const double MAX_LAG = 0.25;               // Maximum deltaTime to prevent spiral of death
+	auto previous = std::chrono::high_resolution_clock::now();
+	double lag = 0.0;
+	const double FIXED_UPDATE_INTERVAL = 1.0 / 60.0;
+	const double MAX_LAG = 0.25;
 
-    while (game.Running()) {
-        // Calculate deltaTime: the time elapsed since the last frame
-        double currentFrameTime = GetTime();
-        double deltaTime = currentFrameTime - previousFrameTime;
-        previousFrameTime = currentFrameTime;
+	while (game.Running()) {
+		auto current = std::chrono::high_resolution_clock::now();
+		double deltaTime = std::chrono::duration<double>(current - previous).count();
+		previous = current;
 
-        // Clamp deltaTime to avoid huge jumps in simulation time (helps prevent simulation instability)
-        if (deltaTime > MAX_LAG) {
-            deltaTime = MAX_LAG;
-        }
-        lag += deltaTime; // Accumulate lag
+		if (deltaTime > MAX_LAG) {
+			deltaTime = MAX_LAG;
+		}
+		lag += deltaTime;
 
-        // Process input and perform variable updates
-        game.Input();
-        game.Update();
+		game.Input();
+		game.Update();
 
-        // Fixed update loop: Process simulation updates at a constant rate
-        int fixedUpdateCount = 0;
-        while (lag >= FIXED_UPDATE_INTERVAL) {
-            game.FixedUpdate();
-            lag -= FIXED_UPDATE_INTERVAL;
-            fixedUpdateCount++;
+		int fixedUpdateCount = 0;
+		while (lag >= FIXED_UPDATE_INTERVAL) {
+			game.FixedUpdate();
+			lag -= FIXED_UPDATE_INTERVAL;
+			fixedUpdateCount++;
 
-            // Prevent excessive fixed updates in one frame (can occur under heavy load)
-            if (fixedUpdateCount > 5) {
-                break;
-            }
-        }
+			if (fixedUpdateCount > 5) {
+				break;
+			}
+		}
+		double alpha = lag / FIXED_UPDATE_INTERVAL;
+		game.Render(alpha);
+	}
 
-        // Compute interpolation factor (alpha) for smooth rendering between fixed updates
-        double alpha = lag / FIXED_UPDATE_INTERVAL;
-        game.Render(alpha);
-    }
-    game.Clean();
-    return 0;
+	game.Clean();
+	return 0;
 }
 ```
 
 ---
 
-### Loop Breakdown
+### Talking about the loop
+> As I mentioned earlier, this game loop closely follows the best practices outlined in *Game Programming Patterns* by Robert Nystrom. For a deeper look at exactly how game loops work and some of the other technicalities I didn't cover I highly recommend checking out the sources at the end of this article. Without using all of them I wouldn't have been able to implement this loop.
 
+Here’s my take on the loop and some of the decisions I made while I implemented it.
+
+We start by initializing the game. The `Initialize()` method is called before the loop begins, and several important variables are set up here. To give you a brief overview of the key variables:
+
+- **`previous`**: Holds the timestamp of the previous frame, which is used to calculate `deltaTime`.
+- **`lag`**: Accumulates the extra time between frames
+- **`FIXED_UPDATE_INTERVAL`**: The fixed update time interval. In my case, it’s 1/60th of a second.
+- **`MAX_LAG`**: A cap on how much lag can be accumulated to prevent excessive frame skips.
+- **`current`**: The timestamp of the current frame.
+- **`deltaTime`**: The time between frames.
+
+Once the initialization is done, we enter the main loop, which will keep running until the game/program ends. A few checks are made here to keep things consistent. First, we check and clamp `deltaTime` to avoid situations where it becomes too large. If `deltaTime` gets too high, it could cause a massive spike in lag, which leads to longer frames and erratic performance. By capping `deltaTime` we ensure the game remains stable.
+
+After checking for input in the `game.Input()` call and running the variable update (`game.Update()`) loop, we check if enough lag has accumulated to trigger the fixed updates. This is done with:
+
+``` c++
+while (lag >= FIXED_UPDATE_INTERVAL)
+```
+
+If the accumulated lag is higher than or equal to the fixed update interval, we run the simulation-related code (e.g., physics, AI, etc.) within `game.FixedUpdate()`. This guarantees that the simulation updates occur at a consistent rate, independent of the frame rate.
+
+There’s a safety check in place to prevent the fixed update loop from running too many times in a single frame, which could happen if there’s a large amount of lag. If `fixedUpdateCount` is higher than 5, we break out of the loop, this prioritizes simulation consistency over drawing frames. This ensures that the simulation doesn't get stuck in an infinite loop, and the rendering process keeps running smoothly.
+
+Lastly, we get the `alpha` value, which is used for interpolation in the renderer.
+> Note: I still do not 100% how alpha will be used so I'm not going to say much more on it now. 
 
 ---
 
 ## Conclusion
-I learnt a lot while implementing this game loop and it took me a lot longer than I thought it would. But now that it is complete we can move on. In the **Planned Features** list I was planning to tackle the Game State System next but I changed my mind. I need something a little more concrete to test my game loop a little bit and see if I can find any issues. Also I'd like to actually SEE some progress. So next up is a texture manager system and a smaller state machine for the player character.
+Implementing this game loop turned out to be more challenging and time-consuming than I initially anticipated, but it was a great step in building the foundations of my engine. Now that the game loop is in place and functioning, I can move forward.
+
+Originally, I planned to get into implementing the Game State System next, but I’ve decided to shift gears for now. I want something more tangible to test the game loop and identify any potential bugs or issues before I move onto other features. Plus, I’d like to see some visual progress to keep me motivated. 
+
+So, next up is a texture manager system and a simpler state machine for the player character. These will allow me to start testing and rendering actual game objects, which will help me test the game loop’s performance.
 
 ---
 
