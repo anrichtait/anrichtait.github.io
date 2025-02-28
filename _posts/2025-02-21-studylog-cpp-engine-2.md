@@ -91,7 +91,7 @@ I'm not going to go into the code for each member function right now, but here's
 ### main.cpp FINALLY THE LOOP
 Considering that the game loop is such an important part of the engine—and everything else builds off of it—I decided to implement it in the `main()` function. From here, all the other features can be branched out into their own files and headers.
 
-> The below code block is condensed, to see the full implementation look at the **main.cpp** in [this repo]().
+> The below code block is condensed, to see the full implementation look at the **main.cpp** in [this repo](https://github.com/anrichtait/low-light-engine).
 
 ``` c++
 
