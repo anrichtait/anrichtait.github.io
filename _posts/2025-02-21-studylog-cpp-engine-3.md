@@ -6,7 +6,7 @@ tags: [cpp, gamedev, learning]     # TAG names should always be lowercase
 description: An article following my attempt at creating a framework agnostic texture manager.
 toc: true
 comments: false
-media_subpath: /assets/img/
+media_subpath: 
 ---
 
 ## Introduction
