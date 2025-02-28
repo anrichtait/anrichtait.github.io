@@ -53,7 +53,7 @@ A fixed update interval ensures that all simulation calculations occur at a cons
 ---
 
 ## Implementing the Game Loop
-*For those interested in the code, it will be on my [GitHub](linktogithub).*
+*For those interested in the code, it will be on my [GitHub](https://github.com/anrichtait).*
 
 My goals for the game loop are to separate the fixed update and normal update loops. This will stabilize the physics and other simulation-related code and also allow me to later possibly add multiplayer support to the game engine. While implementing the game loop, I did my best to follow the best practices discussed in the book *Game Programming Patterns*. Let's take a closer look at the full implementation.
 
@@ -167,12 +167,12 @@ Below are the resources I used while researching this article.
 - Programming Principles and Practice Using C++ - Bjarne Stroustrup
 
 ### Articles:
-- [Fix Your Timestep! - Gaffer on Games](link.com)
-- [Mastering the Unity Game Loop](link.com)
+- [Fix Your Timestep! - Gaffer on Games](https://gafferongames.com/post/fix_your_timestep/)
+- [Mastering the Unity Game Loop](https://bleedingedge.studio/blog/master-game-loop-startvsupdate-function/)
 
 ### Videos:
-- [Video on deltaTime](link.com)
+- [Video on deltaTime](https://youtu.be/yGhfUcPjXuE?si=sz4cprsYYvSd88Wl)
 
 ### Other:
-- [Raylib docs](link.com)
-- [SDL3 docs](link.com)
+- [Raylib docs](https://www.raylib.com/)
+- [SDL3 docs](https://wiki.libsdl.org/SDL3/FrontPage)
