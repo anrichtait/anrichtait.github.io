@@ -1,9 +1,9 @@
 ---
-title: Studylog - A New Learning Journey Begins
+title: Studylog - Making a Game Engine
 date: 2025-02-21 04:00:00 +/-TTTT
 categories: [Studylog, C++, Game Dev]
 tags: [cpp, game dev, learning]     # TAG names should always be lowercase
-description: A new studylog discussing the things i'm learning at the moment and a deeper look into game loop design.
+description: A new studylog discussing the things I'm learning at the moment and a brief summary of the game engine I'm working on.
 toc: true
 comments: false
 media_subpath: /assets/img/
@@ -40,20 +40,3 @@ I am not going to plan a whole bunch of features and give myself an overwhelming
 ## Conclusion
 This post marks the start of my journey into building a custom game engine from the ground up. In my next article, I'll dive into the technical details behind designing a robust game loop—exploring the options, trade-offs, and decisions that will form the heart of my engine. Stay tuned!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Brain Made
-This post was [Brain Made](https://brainmade.org/index.html#about). 
-
-<img src="https://brainmade.org/black-logo.png" alt="This blog post was Brain Made" width="20%" height="auto">

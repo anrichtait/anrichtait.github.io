@@ -137,10 +137,3 @@ I hope this guide helps you get started. Feel free to reach out via discord if y
 
 Most linked resources provide detailed instructions. If you encounter issues, reach out on my discord channel: https://discord.gg/8a7SXdHy
 
-
-## Brain Made
-This post was [Brain Made](https://brainmade.org/index.html#about). 
-
-<img src="https://brainmade.org/black-logo.png" alt="This blog post was Brain Made" width="20%" height="auto">
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I4ZPGX8)

@@ -124,8 +124,3 @@ This file is where you can change many aspects of each Pokémon. Below you can s
 I don't often change the base stats, but I have been tinkering with Litten's a little bit to make it more balanced as a starter. The above settings are all default, but I removed the Blaze ability so Intimidate is always the given ability. I think without it, Litten isn't a viable option compared to the others. I did something similar with Sprigatito, who now always has the Protean ability.
 
 ---
-
-## Brain Made
-This post was [Brain Made](https://brainmade.org/index.html#about). 
-
-<img src="https://brainmade.org/black-logo.png" alt="This blog post was Brain Made" width="20%" height="auto">

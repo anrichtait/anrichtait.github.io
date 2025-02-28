@@ -26,8 +26,17 @@ media_subpath: /assets/img/
 
 
 
+## Sources and References:
+Below are the resources I used while researching this article.
 
-## Brain Made
-This post was [Brain Made](https://brainmade.org/index.html#about). 
+### Books:
+- Game Programming Patterns - Robert Nystrom
+- Programming Principles and Practice Using C++ - Bjarne Stroustrup
 
-<img src="https://brainmade.org/black-logo.png" alt="This blog post was Brain Made" width="20%" height="auto">
+### Articles:
+
+### Videos:
+
+### Other:
+- [Raylib docs](link.com)
+- [SDL3 docs](link.com)
