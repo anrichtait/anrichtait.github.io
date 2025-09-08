@@ -965,3 +965,38 @@ ul.search-results {
         padding-left: 0;
     }
 }
+
+/* Custom styles for minimal temporary site */
+.post-summary {
+    transition: all 0.3s ease;
+}
+
+.post-summary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.post-summary .post-title a:hover {
+    color: #007acc !important;
+}
+
+.tag {
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+.tag:hover {
+    background-color: #007acc !important;
+    color: white !important;
+}
+
+/* Responsive improvements for coming soon page */
+@media (max-width: 768px) {
+    .content .inner > div h1 {
+        font-size: 2.5em !important;
+    }
+    
+    .content .inner > div p {
+        font-size: 1.1em !important;
+    }
+}

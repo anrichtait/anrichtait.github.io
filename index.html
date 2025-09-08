@@ -3,18 +3,22 @@ layout: default
 ---
 <main class="content fade-in-down delay-0_75s">
     <div class="inner">
-        {% include loop.html %}
-        {% if paginator.total_pages > 1 %}
-        <nav class="pagination">
-            <h2 class="screen-reader-text">Posts navigation</h2>
-            {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="newer-posts"><i class="fa fa-angle-left" aria-hidden="true"></i> Newer Posts</a>
-            {% endif %}
-            <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-            {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="older-posts">Older Posts <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-            {% endif %}
-        </nav><!-- .pagination -->
-        {% endif %}
+        <div style="text-align: center; padding: 80px 20px; max-width: 600px; margin: 0 auto;">
+            <div style="margin-bottom: 40px;">
+                <h1 style="font-size: 3.5em; margin-bottom: 20px; color: #2c3e50; font-weight: 300; letter-spacing: -1px;">New Website Coming Soon</h1>
+                <div style="width: 60px; height: 3px; background: #007acc; margin: 0 auto 30px;"></div>
+                <p style="font-size: 1.3em; color: #666; line-height: 1.6; margin-bottom: 40px;">
+                    I'm working on something new and exciting. In the meantime, check out my 
+                    <a href="/archive/" style="color: #007acc; text-decoration: none; border-bottom: 2px solid #007acc;">blog archive</a> 
+                    or connect with me on social media below.
+                </p>
+            </div>
+            <div style="display: inline-block; padding: 15px 30px; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <p style="margin: 0; color: #666; font-size: 0.9em;">
+                    <strong>{{ site.posts.size }}</strong> posts available in the 
+                    <a href="/archive/" style="color: #007acc; text-decoration: none;">archive</a>
+                </p>
+            </div>
+        </div>
     </div><!-- .inner -->
 </main><!-- .content -->
