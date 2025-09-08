@@ -15,12 +15,8 @@ baseurl: ""
 sass:
   sass_dir: _sass
 
-# Site navigation - each item must have a title and a url.
-navigation:
-- text: Home
-  url: /
-- text: Archive
-  url: /archive/
+# Site navigation - disabled for minimal site
+# navigation:
 
 
 # Author information - author info at the bottom of the post
